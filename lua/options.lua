@@ -3,6 +3,8 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- Better File Exprlorer indetation
+vim.cmd 'let g:netrw_liststyle = 3'
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -58,5 +60,20 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+-- Relative Line Numbers
+vim.opt.relativenumber = true
+-- Indentation
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+
+-- Color Adjustments
+
+vim.opt.termguicolors = true
+vim.opt.background = 'dark'
+vim.opt.signcolumn = 'yes'
+
+vim.opt.backspace = 'indent,eol,start'
 
 -- vim: ts=2 sts=2 sw=2 et

@@ -17,7 +17,9 @@ return {
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
-    config = function() -- This is the function that runs, AFTER loading
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 500 -- This is the function that runs, AFTER loading
       require('which-key').setup()
 
       -- Document existing key chains
