@@ -90,7 +90,6 @@ P.S. You can delete this when you're done too. It's your config now! :)
 
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
-
 -- [[ Setting options ]]
 require 'options'
 
