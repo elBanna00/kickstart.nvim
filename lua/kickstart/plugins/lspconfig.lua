@@ -201,6 +201,12 @@ return {
         'emmet_ls',
         'prismals',
         'pyright', -- Used to format Lua code
+        'prettier', -- prettier formatter
+        'stylua', -- lua formatter
+        'isort', -- python formatter
+        'black', -- python formatter
+        'pylint',
+        'eslint_d',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
