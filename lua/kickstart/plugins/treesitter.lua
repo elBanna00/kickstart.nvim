@@ -28,6 +28,7 @@ return {
         'query',
         'vimdoc',
         'c',
+        'go',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
