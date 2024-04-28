@@ -19,12 +19,28 @@ return {
           -- `friendly-snippets` contains a variety of premade snippets.
           --    See the README about individual language/framework/plugin snippets:
           --    https://github.com/rafamadriz/friendly-snippets
-          -- {
-          --   'rafamadriz/friendly-snippets',
-          --   config = function()
-          --     require('luasnip.loaders.from_vscode').lazy_load()
-          --   end,
-          -- },
+          {
+            'rafamadriz/friendly-snippets',
+            config = function()
+              require('luasnip.loaders.from_vscode').lazy_load()
+              local luasnip = require 'luasnip'
+
+              -- html snippets in javascript and javascriptreact
+              luasnip.snippets = {
+                html = {},
+              }
+              luasnip.snippets.javascript = luasnip.snippets.html
+              luasnip.snippets.javascriptreact = luasnip.snippets.html
+              luasnip.snippets.typescriptreact = luasnip.snippets.html
+
+              require('luasnip/loaders/from_vscode').load { include = { 'html' } }
+              require('luasnip/loaders/from_vscode').lazy_load()
+              require('luasnip').filetype_extend('javascript', { 'javascriptreact' })
+
+              require('luasnip').filetype_extend('typescript', { 'typescriptreact' })
+              require('luasnip').filetype_extend('javascript', { 'html' })
+            end,
+          },
         },
       },
       'saadparwaiz1/cmp_luasnip',
