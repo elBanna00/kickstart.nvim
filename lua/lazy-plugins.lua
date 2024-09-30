@@ -38,7 +38,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'custom/plugins/gruvbox',
+  require 'custom/plugins/rose-pine',
 
   require 'kickstart/plugins/todo-comments',
 
